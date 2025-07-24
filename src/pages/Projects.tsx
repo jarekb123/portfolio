@@ -3,8 +3,30 @@ import { projects } from '@/data/projects';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Calendar, Code2 } from 'lucide-react';
+import { useState } from 'react';
+
+const PROJECT_TYPES = [
+  { label: 'Frontend', value: 'frontend' },
+  { label: 'Mobile', value: 'mobile' },
+  { label: 'Fullstack', value: 'fullstack' },
+];
 
 const Projects = () => {
+  const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
+
+  const handleTypeChange = (type: string) => {
+    setSelectedTypes((prev) =>
+      prev.includes(type)
+        ? prev.filter((t) => t !== type)
+        : [...prev, type]
+    );
+  };
+
+  const filteredProjects =
+    selectedTypes.length === 0
+      ? projects
+      : projects.filter((project) => selectedTypes.includes(project.projectType));
+
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-16">
@@ -18,9 +40,27 @@ const Projects = () => {
           </p>
         </div>
 
+        {/* Project Type Filter */}
+        <div className="mb-10 flex flex-wrap gap-4 justify-center">
+          {PROJECT_TYPES.map((type) => (
+            <label
+              key={type.value}
+              className={`inline-flex items-center px-4 py-2 rounded-full border cursor-pointer transition-colors text-sm font-medium ${selectedTypes.includes(type.value) ? 'bg-primary text-primary-foreground border-primary' : 'bg-muted text-muted-foreground border-muted-foreground/20'}`}
+            >
+              <input
+                type="checkbox"
+                className="hidden"
+                checked={selectedTypes.includes(type.value)}
+                onChange={() => handleTypeChange(type.value)}
+              />
+              {type.label}
+            </label>
+          ))}
+        </div>
+
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {filteredProjects.map((project) => (
             <Card key={project.id} className="group hover:shadow-lg transition-all duration-300 overflow-hidden">
               {/* Preview Images */}
               <div className="relative h-48 overflow-hidden">
@@ -94,7 +134,7 @@ const Projects = () => {
         </div>
 
         {/* Empty State */}
-        {projects.length === 0 && (
+        {filteredProjects.length === 0 && (
           <div className="text-center py-16">
             <div className="text-muted-foreground text-lg">
               No projects found. Check back soon for updates!

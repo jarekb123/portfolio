@@ -3,114 +3,136 @@ import { Project } from '@/types/project';
 export const projects: Project[] = [
   {
     id: '1',
-    slug: 'e-commerce-dashboard',
-    name: 'E-Commerce Dashboard',
-    shortDescription: 'Modern React dashboard for e-commerce management with real-time analytics',
-    fullDescription: 'A comprehensive e-commerce dashboard built with React and TypeScript, featuring real-time analytics, inventory management, order tracking, and customer insights. The application includes interactive charts, data visualization, and a responsive design optimized for both desktop and mobile devices.',
-    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Chart.js'],
-    libraries: ['React Query', 'React Hook Form', 'Framer Motion', 'Lucide React'],
+    slug: 'infinit-flutter-web-to-nextjs',
+    name: 'Infinit - migrate flutter web to next.js',
+    shortDescription: 'Migration of a Flutter web app to Next.js, leveraging native web technologies and AI-driven UI generation.',
+    fullDescription: 'Led the migration of a complex Flutter web application to a modern Next.js stack, utilizing native web technologies. Integrated AI agents (Cursor, VS Code Copilot, Claude/GPT/Gemini) for code generation and automation. Employed a Figma MCP server to automatically generate UI code, while maintaining business logic in custom React hooks and extracting CQRS API requests for TypeScript client generation.',
+    techStack: ['Next.js', 'React', 'TypeScript', 'Figma MCP', 'AI Agents', 'CQRS', 'OpenAPI'],
+    libraries: ['React Query', 'Zod', 'Axios', 'SWR', 'Custom AI Integrations'],
     responsibilities: [
-      'Designed and implemented the complete UI/UX architecture',
-      'Developed real-time dashboard components with interactive charts',
-      'Integrated REST APIs for data fetching and state management',
-      'Implemented responsive design patterns for mobile compatibility',
-      'Created reusable component library following design system principles'
+      'Implemented app with AI agents: Cursor, VS Code Copilot, Claude/GPT/Gemini models',
+      'Used Figma MCP server to automatically generate UI code with AI agents',
+      'Kept business logic (API integration, form validation, etc.) in custom hooks',
+      'Extracted CQRS API requests/responses to generate API TypeScript clients'
     ],
     interestingCases: [
-      'Implemented real-time data updates using WebSocket connections',
-      'Optimized performance with React.memo and useMemo for large datasets',
-      'Created custom hooks for complex state management across components',
-      'Developed advanced filtering and search functionality with debouncing'
+      'Automated UI code generation from Figma designs using AI agents',
+      'Seamless migration of business logic from Flutter to React custom hooks',
+      'Type-safe API client generation from CQRS endpoints'
     ],
-    previewImages: [
-      '/projects/dashboard/preview-1.jpg',
-      '/projects/dashboard/preview-2.jpg',
-      '/projects/dashboard/preview-3.jpg'
-    ],
-    allImages: [
-      '/projects/dashboard/preview-1.jpg',
-      '/projects/dashboard/preview-2.jpg',
-      '/projects/dashboard/preview-3.jpg',
-      '/projects/dashboard/detail-1.jpg',
-      '/projects/dashboard/detail-2.jpg'
-    ],
-    featured: true,
-    completionDate: '2024-01',
+    previewImages: ['/placeholder.svg'],
+    allImages: ['/placeholder.svg'],
+    featured: false,
+    completionDate: '2025-02',
     projectType: 'frontend'
   },
   {
     id: '2',
-    slug: 'mobile-fitness-app',
-    name: 'Mobile Fitness Tracker',
-    shortDescription: 'React Native fitness tracking app with workout plans and progress analytics',
-    fullDescription: 'A comprehensive fitness tracking mobile application built with React Native, featuring personalized workout plans, progress tracking, nutrition logging, and social features. The app includes offline capabilities, push notifications, and integration with health APIs.',
-    techStack: ['React Native', 'TypeScript', 'Expo', 'SQLite'],
-    libraries: ['React Navigation', 'Async Storage', 'React Native Reanimated', 'Expo Notifications'],
+    slug: 'infinit-leads-management-frontend',
+    name: 'Infinit - Leads Management Frontend',
+    shortDescription: 'Fullstack React + Vite project for leads management, featuring a custom design system and advanced integrations.',
+    fullDescription: 'Developed a fullstack leads management platform from scratch using React and Vite with TypeScript. Built a shared design system library with custom components based on Ant Design and CSS-in-JS. Integrated with REST APIs using OpenAPI-generated clients and React Query, and added VAPI (voice AI agent) support. Implemented business event tracking with Amplitude and contributed to the FastAPI backend (Pydantic models, migrations, endpoints, custom joins).',
+    techStack: ['React', 'Vite', 'TypeScript', 'Ant Design', 'CSS-in-JS', 'FastAPI', 'OpenAPI'],
+    libraries: ['React Query', 'Amplitude', 'VAPI', 'Pydantic', 'Custom Design System'],
     responsibilities: [
-      'Led mobile application development from concept to deployment',
-      'Implemented complex animations and gesture handling',
-      'Developed offline-first architecture with local data persistence',
-      'Integrated device sensors for activity tracking',
-      'Designed and implemented push notification system'
+      'Created React + Vite TypeScript project from scratch',
+      'Built shared design system library with custom components (AntD + CSS-in-JS)',
+      'Integrated with REST API (OpenAPI-generated client + React Query)',
+      'Integrated with VAPI (voice AI agent)',
+      'Sent business events to Amplitude service',
+      'Contributed to FastAPI backend: Pydantic models, migrations, endpoints, custom joins'
     ],
     interestingCases: [
-      'Built custom exercise animation system using React Native Reanimated',
-      'Implemented background location tracking with battery optimization',
-      'Created offline synchronization mechanism for workout data',
-      'Developed custom chart components for progress visualization'
+      'Automated OpenAPI client generation and seamless integration with React Query',
+      'Voice AI agent (VAPI) integration for enhanced user interaction',
+      'Shared design system for consistent UI/UX across multiple projects'
     ],
-    previewImages: [
-      '/projects/fitness/preview-1.jpg',
-      '/projects/fitness/preview-2.jpg',
-      '/projects/fitness/preview-3.jpg'
-    ],
-    allImages: [
-      '/projects/fitness/preview-1.jpg',
-      '/projects/fitness/preview-2.jpg',
-      '/projects/fitness/preview-3.jpg',
-      '/projects/fitness/detail-1.jpg',
-      '/projects/fitness/detail-2.jpg',
-      '/projects/fitness/detail-3.jpg'
-    ],
+    previewImages: ['confidential'],
+    allImages: ['confidential'],
     featured: true,
-    completionDate: '2023-11',
-    projectType: 'mobile'
+    completionDate: '2025-05',
+    projectType: 'fullstack'
   },
   {
     id: '3',
-    slug: 'task-management-platform',
-    name: 'Task Management Platform',
-    shortDescription: 'Collaborative task management platform with team features and integrations',
-    fullDescription: 'A full-featured task management platform designed for teams, offering project organization, task assignments, deadline tracking, and team collaboration tools. Built with modern web technologies and featuring real-time updates, file attachments, and third-party integrations.',
-    techStack: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
-    libraries: ['React Query', 'Socket.io', 'React DnD', 'Date-fns'],
+    slug: 'infinit-nextjs-static-sites-generator',
+    name: 'Infinit - Next.JS static sites generator',
+    shortDescription: 'AI-powered static site generator using Next.js, dynamic forms, and JSON schema integration.',
+    fullDescription: 'Created a proof-of-concept static site generator using Next.js and TypeScript, powered by the bolt.new AI agent. Implemented dynamic forms based on JSON schema with custom field renderers and validation. Developed a script to generate static sites from Next.js templates and JSON configuration files, supporting partially client-rendered content. Styled with Ant Design and contributed to FastAPI backend for dynamic data merging.',
+    techStack: ['Next.js', 'TypeScript', 'Ant Design', 'JSON Schema', 'FastAPI', 'bolt.new AI'],
+    libraries: ['Ajv', 'Ant Design', 'Custom Form Renderers', 'React Query'],
     responsibilities: [
-      'Architected full-stack application with React frontend and Node.js backend',
-      'Implemented real-time collaboration features using WebSockets',
-      'Designed and optimized PostgreSQL database schema',
-      'Built drag-and-drop task management interface',
-      'Integrated third-party APIs for calendar and notification services'
+      'Created PoC with bolt.new AI agent (Next.js + TypeScript)',
+      'Implemented dynamic form based on JSON schema with custom field renderers',
+      'Validated form data with JSON schema validators',
+      'Developed script for Next.js SSG: template + JSON config = static site',
+      'Styled with Ant Design components',
+      'Contributed to FastAPI backend: merged dynamic data from backend and frontend forms'
     ],
     interestingCases: [
-      'Implemented real-time collaborative editing with conflict resolution',
-      'Built custom drag-and-drop system with smooth animations',
-      'Created advanced permission system with role-based access control',
-      'Optimized database queries for large datasets with complex relationships'
+      'Dynamic form rendering and validation from JSON schema',
+      'Automated static site generation with partial client rendering',
+      'Backend-frontend data merging for dynamic content delivery'
     ],
-    previewImages: [
-      '/projects/taskman/preview-1.jpg',
-      '/projects/taskman/preview-2.jpg',
-      '/projects/taskman/preview-3.jpg'
-    ],
-    allImages: [
-      '/projects/taskman/preview-1.jpg',
-      '/projects/taskman/preview-2.jpg',
-      '/projects/taskman/preview-3.jpg',
-      '/projects/taskman/detail-1.jpg',
-      '/projects/taskman/detail-2.jpg'
-    ],
+    previewImages: ['/placeholder.svg'],
+    allImages: ['/placeholder.svg'],
     featured: false,
-    completionDate: '2023-08',
-    projectType: 'fullstack'
+    completionDate: '2025-03',
+    projectType: 'frontend'
+  },
+  {
+    id: '4',
+    slug: 'infinit-flutter-app',
+    name: 'Infinit - Flutter app',
+    shortDescription: 'Mobile app with custom form validation, shared design system, and deep API integrations.',
+    fullDescription: 'Developed a robust Flutter mobile application featuring a custom form validation framework and a shared design system for consistent UI/UX. Integrated with CQRS and OpenAPI services using code-generated clients. Contributed to a Nest.JS microservice, integrated SWAN banking-as-a-service, Amplitude analytics, and ory.kratos authentication.',
+    techStack: ['Flutter', 'Dart', 'CQRS', 'OpenAPI', 'NestJS', 'SWAN', 'Amplitude', 'ory.kratos'],
+    libraries: ['Provider', 'GetIt', 'Dio', 'Custom Form Validation', 'Amplitude SDK'],
+    responsibilities: [
+      'Created custom form validation framework',
+      'Built shared design system for UI/UX consistency',
+      'Integrated with CQRS API services',
+      'Integrated with OpenAPI services (auto-generated clients)',
+      'Contributed to Nest.JS micro-service',
+      'Integrated with SWAN banking-as-a-service',
+      'Integrated with Amplitude (analytics events)',
+      'Integrated with ory.kratos auth service (API and browser flow)'
+    ],
+    interestingCases: [
+      'Custom form validation framework for complex business logic',
+      'Seamless integration of multiple external services (SWAN, Amplitude, ory.kratos)',
+      'Shared design system for rapid feature development'
+    ],
+    previewImages: ['/placeholder.svg'],
+    allImages: ['/placeholder.svg'],
+    featured: true,
+    completionDate: '2025-07',
+    projectType: 'mobile'
+  },
+  {
+    id: '5',
+    slug: 'infinit-backoffice-react-frontend',
+    name: 'Infinit - backoffice react frontend',
+    shortDescription: 'Backoffice frontend with dynamic forms, Ant Design UI, and secure API integrations.',
+    fullDescription: 'Built a backoffice React frontend featuring dynamic form generation from JSON schema and styled with Ant Design. Integrated with CQRS and OpenAPI services, and implemented authentication via ory.kratos (API and browser flow).',
+    techStack: ['React', 'TypeScript', 'Ant Design', 'CQRS', 'OpenAPI', 'ory.kratos'],
+    libraries: ['React Query', 'Ant Design', 'Custom Form Generator', 'Axios'],
+    responsibilities: [
+      'Generated dynamic forms based on JSON schema',
+      'Styled UI/UX with Ant Design',
+      'Integrated with CQRS API services',
+      'Integrated with OpenAPI services',
+      'Integrated with ory.kratos auth service (browser flow)'
+    ],
+    interestingCases: [
+      'Dynamic form generation for backoffice workflows',
+      'Secure authentication integration with ory.kratos',
+      'Unified API integration with CQRS and OpenAPI clients'
+    ],
+    previewImages: ['/placeholder.svg'],
+    allImages: ['/placeholder.svg'],
+    featured: false,
+    completionDate: '2025-07',
+    projectType: 'frontend'
   }
 ];
