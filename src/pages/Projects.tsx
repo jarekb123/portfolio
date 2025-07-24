@@ -1,0 +1,109 @@
+import { Link } from 'react-router-dom';
+import { projects } from '@/data/projects';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { ArrowRight, Calendar, Code2 } from 'lucide-react';
+
+const Projects = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto px-4 py-16">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+            My Projects
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            A showcase of frontend and mobile applications I've built with modern technologies
+          </p>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <Card key={project.id} className="group hover:shadow-lg transition-all duration-300 overflow-hidden">
+              {/* Preview Images */}
+              <div className="relative h-48 overflow-hidden">
+                <div className="flex space-x-2 p-4">
+                  {project.previewImages.slice(0, 3).map((image, index) => (
+                    <div
+                      key={index}
+                      className="flex-1 h-32 bg-muted rounded-lg flex items-center justify-center text-muted-foreground text-sm"
+                    >
+                      Preview {index + 1}
+                    </div>
+                  ))}
+                </div>
+                {project.featured && (
+                  <Badge className="absolute top-2 right-2 bg-primary/90">
+                    Featured
+                  </Badge>
+                )}
+              </div>
+
+              <CardHeader>
+                <div className="flex items-center justify-between mb-2">
+                  <Badge variant="secondary" className="capitalize">
+                    {project.projectType}
+                  </Badge>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Calendar className="w-4 h-4 mr-1" />
+                    {project.completionDate}
+                  </div>
+                </div>
+                <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                  {project.name}
+                </CardTitle>
+                <CardDescription className="line-clamp-2">
+                  {project.shortDescription}
+                </CardDescription>
+              </CardHeader>
+
+              <CardContent>
+                {/* Tech Stack */}
+                <div className="mb-4">
+                  <div className="flex items-center mb-2">
+                    <Code2 className="w-4 h-4 mr-2 text-muted-foreground" />
+                    <span className="text-sm font-medium">Tech Stack</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1">
+                    {project.techStack.slice(0, 3).map((tech) => (
+                      <Badge key={tech} variant="outline" className="text-xs">
+                        {tech}
+                      </Badge>
+                    ))}
+                    {project.techStack.length > 3 && (
+                      <Badge variant="outline" className="text-xs">
+                        +{project.techStack.length - 3} more
+                      </Badge>
+                    )}
+                  </div>
+                </div>
+
+                {/* View Details Link */}
+                <Link
+                  to={`/projects/${project.slug}`}
+                  className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium"
+                >
+                  View Details
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Empty State */}
+        {projects.length === 0 && (
+          <div className="text-center py-16">
+            <div className="text-muted-foreground text-lg">
+              No projects found. Check back soon for updates!
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Projects;
