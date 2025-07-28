@@ -1,3 +1,5 @@
+const BASE_URL = import.meta.env.BASE_URL;
+
 import { Project } from '@/types/project';
 
 export const projects: Project[] = [
@@ -31,11 +33,11 @@ export const projects: Project[] = [
       'Integration with multiple analytics tools - designed simple tool-agnostic analytics client',
       'Optimizing queries for fetching the offers showing on the map',
     ],
-    previewImages: ['/fd-01.jpeg'],
+    previewImages: [`${BASE_URL}fd-01.jpeg`],
     allImages: [
-      '/fd-01.jpeg',
-      '/fd-02.jpeg',
-      '/fd-03.jpeg',
+      `${BASE_URL}fd-01.jpeg`,
+      `${BASE_URL}fd-02.jpeg`,
+      `${BASE_URL}fd-03.jpeg`,
     ],
     projectType: ['mobile', 'frontend']
   },
@@ -62,12 +64,12 @@ export const projects: Project[] = [
       'Cross-domain communication between microfrontends in Flutter packages',
       'Atomic design system implementation for banking UI'
     ],
-    previewImages: ['/cabp-01.webp'],
+    previewImages: [`${BASE_URL}cabp-01.webp`],
     allImages: [
-      '/cabp-01.webp',
-      '/cabp-02.png',
-      '/cabp-03.webp',
-      '/cabp-04.png',
+      `${BASE_URL}cabp-01.webp`,
+      `${BASE_URL}cabp-02.png`,
+      `${BASE_URL}cabp-03.webp`,
+      `${BASE_URL}cabp-04.png`,
     ],
     projectType: ['mobile']
   },
@@ -90,12 +92,12 @@ export const projects: Project[] = [
       'Smooth chat animations and bug fixes',
       'Video player integration in training plans'
     ],
-    previewImages: ['/trainn-01.jpeg'],
+    previewImages: [`${BASE_URL}trainn-01.jpeg`],
     allImages: [
-      '/trainn-01.jpeg',
-      '/trainn-02.jpeg',
-      '/trainn-03.jpeg',
-      '/trainn-04.jpeg',
+      `${BASE_URL}trainn-01.jpeg`,
+      `${BASE_URL}trainn-02.jpeg`,
+      `${BASE_URL}trainn-03.jpeg`,
+      `${BASE_URL}trainn-04.jpeg`,
     ],
     projectType: ['mobile']
   },
@@ -118,7 +120,7 @@ export const projects: Project[] = [
       'Seamless migration of business logic from Flutter to React custom hooks',
       'Type-safe API client generation from CQRS endpoints'
     ],
-    previewImages: ['/nextjs.jpg'],
+    previewImages: [`${BASE_URL}nextjs.jpg`],
     allImages: [],
     projectType: ['frontend']
   },
@@ -143,7 +145,7 @@ export const projects: Project[] = [
       'VAPI integration for showing the power of voice AI agents',
       'Shared design system for consistent UI/UX across multiple projects'
     ],
-    previewImages: ['/reactvite.png'],
+    previewImages: [`${BASE_URL}reactvite.png`],
     allImages: [],
     projectType: ['frontend']
   },
@@ -168,7 +170,7 @@ export const projects: Project[] = [
       'Automated static site generation with partial client rendering',
       'Backend-frontend data merging for dynamic content delivery'
     ],
-    previewImages: ['/nextjs.jpg'],
+    previewImages: [`${BASE_URL}nextjs.jpg`],
     allImages: [],
     projectType: ['frontend']
   },
@@ -196,7 +198,7 @@ export const projects: Project[] = [
       'Seamless integration of multiple external services (SWAN, Amplitude, ory.kratos)',
       'Shared design system for rapid feature development'
     ],
-    previewImages: ['/flutter.png'],
+    previewImages: [`${BASE_URL}flutter.png`],
     allImages: [],
     projectType: ['mobile']
   },
@@ -220,7 +222,7 @@ export const projects: Project[] = [
       'Secure authentication integration with ory.kratos',
       'Unified API integration with CQRS and OpenAPI clients'
     ],
-    previewImages: ['/reactvite.png'],
+    previewImages: [`${BASE_URL}reactvite.png`],
     allImages: [],
     projectType: ['frontend']
   },
@@ -241,7 +243,7 @@ export const projects: Project[] = [
       'Implemented role-based access for pharmacists and pharmacies',
       'Optimized data fetching and caching with React Query'
     ],
-    previewImages: ['/reactvite.png'],
+    previewImages: [`${BASE_URL}reactvite.png`],
     allImages: [],
     projectType: ['frontend']
   },
@@ -261,7 +263,7 @@ export const projects: Project[] = [
     interestingCases: [
       'QR code-based job time tracking for pharmacists',
     ],
-    previewImages: ['/flutter.png'],
+    previewImages: [`${BASE_URL}flutter.png`],
     allImages: [],
     projectType: ['mobile']
   },
@@ -284,11 +286,11 @@ export const projects: Project[] = [
       'Push notification integration with FCM',
       'Repository pattern for scalable API communication'
     ],
-    previewImages: ['/fc-01.webp'],
+    previewImages: [`${BASE_URL}fc-01.webp`],
     allImages: [
-      '/fc-01.webp',
-      '/fc-03.webp',
-      '/fc-02.webp',
+      `${BASE_URL}fc-01.webp`,
+      `${BASE_URL}fc-03.webp`,
+      `${BASE_URL}fc-02.webp`,
     ],
     projectType: ['mobile']
   },
@@ -311,7 +313,7 @@ export const projects: Project[] = [
       'Native integration with Google Fit',
       'Advanced health data visualization with fl_charts'
     ],
-    previewImages: ['/flutter.png'],
+    previewImages: [`${BASE_URL}flutter.png`],
     allImages: [],
     projectType: ['mobile']
   },
