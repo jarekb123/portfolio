@@ -2,6 +2,104 @@ import { Project } from '@/types/project';
 
 export const projects: Project[] = [
   {
+    id: '8',
+    slug: 'foodsi-stop-wasting-food-mobile-app',
+    name: 'Foodsi - Stop Wasting Food Mobile App',
+    shortDescription: 'A Flutter mobile and web app to help users save food, featuring monorepo management and robust backend migration.',
+    fullDescription: 'Led the Flutter team in developing Foodsi, a mobile and web application designed to reduce food waste. Managed a monorepo with Melos, collaborated closely with startup founders, and ensured a smooth, backwards-compatible migration to a new backend API. Utilized Bugfender for advanced bug analysis and migrated the legacy Ruby frontend to Flutter Web.',
+    techStack: ['Flutter', 'Dart', 'BLoC', 'Figma', 'Flutter Web', 'Melos', 'JSON:API'],
+    libraries: ['BLoC', 'Provider', 'Melos', 'Bugfender'],
+    responsibilities: [
+      'Leading the Flutter team',
+      'Managed monorepo using Melos for mobile and web codebases',
+      'Collaborated closely with startup founders to align on product vision',
+      'Prepared backwards-compatible switch to new backend API',
+      'Analyzed bugs and exceptions using Bugfender',
+      'Migrated Ruby on Rails HTML frontend to Flutter Web',
+      'Designed and implemented JSON:API type-safe flutter client',
+    ],
+    interestingCases: [
+      'Milions of downloads on the app stores (Google Play and App Store)',
+      'Thanks to the monorepo, we were able to produce 2 apps from a single codebase. Mobile app included customer and partner features. Web app included partner features only (no customer features were included in the compiled app).',
+      'Backwards-compatible API migration with rollback capability',
+      'Custom bottom sheets transition animation done with Navigator 2.0 API',
+      'Big refactoring of the codebase - removed thousands of lines of code',
+      'Integrated with PayU payment gateway',
+      'Integrated with Google Pay',
+      'Fixing issues with Google Maps integration (blinking when popping the map screen)',
+      'Partner mobile and web from single codebase - AWD (Adaptive Web Design)',
+      'Integration with multiple analytics tools - designed simple tool-agnostic analytics client',
+      'Optimizing queries for fetching the offers showing on the map',
+    ],
+    previewImages: ['/fd-01.jpeg'],
+    allImages: [
+      '/fd-01.jpeg',
+      '/fd-02.jpeg',
+      '/fd-03.jpeg',
+    ],
+    projectType: ['mobile', 'frontend']
+  },
+  {
+    id: '9',
+    slug: 'credit-agricole-bank-polska',
+    name: 'Credit-Agricole Bank Polska',
+    shortDescription: 'Mobile app for Polish bank, atomic design system, and cross-domain data communication.',
+    fullDescription: 'Developed key features for Credit-Agricole Bank Polska’s mobile banking app, including regular and savings accounts, debit/credit card management, and a pixel-perfect UI based on a 1:1 Figma-to-code atomic design system. Collaborated with business owners to simplify banking processes and designed a cross-domain (microfrontends in separate Flutter packages) reactive data communication system. Integrated with APIs not originally designed for mobile, adding abstraction layers as needed.',
+    techStack: ['Flutter', 'Dart', 'BLoC', 'Melos', 'RxDart'],
+    libraries: ['BLoC', 'RxDart', 'Melos', 'Provider'],
+    responsibilities: [
+      'Milions of downloads on the app stores (Google Play and App Store)',
+      'Implemented regular, savings accounts, and debit/credit card management features',
+      'Contributed to atomic design system (1:1 Figma to code)',
+      'Implemented pixel-perfect UI',
+      'Collaborated with business owners to simplify banking processes',
+      'Designed cross-domain (microfrontends) reactive data communication',
+      'Integrated with APIs not prepared for mobile (added abstraction layers)'
+    ],
+    interestingCases: [
+      'One of the biggest flutter projects in the world - in peak ~30 Flutter devs',
+      'Integration with APIs not designed for mobile apps',
+      'Cross-domain communication between microfrontends in Flutter packages',
+      'Atomic design system implementation for banking UI'
+    ],
+    previewImages: ['/cabp-01.webp'],
+    allImages: [
+      '/cabp-01.webp',
+      '/cabp-02.png',
+      '/cabp-03.webp',
+      '/cabp-04.png',
+    ],
+    projectType: ['mobile']
+  },
+  {
+    id: '10',
+    slug: 'trainn-training-plan-generator',
+    name: 'Trainn - Training Plan Generator',
+    shortDescription: 'Sports app for generating training plans, featuring chat, video player, and social sharing.',
+    fullDescription: 'Enhanced a sports app for generating personalized training plans. Fixed and improved the chat feature and its animations, integrated a video player for workout demonstrations, and implemented functionality to render Flutter widgets as images for social media sharing.',
+    techStack: ['Flutter', 'Dart', 'BLoC', 'RxDart', 'Dio'],
+    libraries: ['BLoC', 'RxDart', 'Dio', 'Video Player'],
+    responsibilities: [
+      'Implementing new features, fixing bugs and maintaining the codebase',
+      'Fixed chat feature and improved its animations',
+      'Integrated video player for workout demonstrations',
+      'Implemented rendering of Flutter widgets to images for social sharing'
+    ],
+    interestingCases: [
+      'Rendering Flutter widgets to images for social media',
+      'Smooth chat animations and bug fixes',
+      'Video player integration in training plans'
+    ],
+    previewImages: ['/trainn-01.jpeg'],
+    allImages: [
+      '/trainn-01.jpeg',
+      '/trainn-02.jpeg',
+      '/trainn-03.jpeg',
+      '/trainn-04.jpeg',
+    ],
+    projectType: ['mobile']
+  },
+  {
     id: '1',
     slug: 'infinit-flutter-web-to-nextjs',
     name: 'Infinit - migrate flutter web to next.js',
@@ -165,102 +263,6 @@ export const projects: Project[] = [
     ],
     previewImages: ['/flutter.png'],
     allImages: [],
-    projectType: ['mobile']
-  },
-  {
-    id: '8',
-    slug: 'foodsi-stop-wasting-food-mobile-app',
-    name: 'Foodsi - Stop Wasting Food Mobile App',
-    shortDescription: 'A Flutter mobile and web app to help users save food, featuring monorepo management and robust backend migration.',
-    fullDescription: 'Led the Flutter team in developing Foodsi, a mobile and web application designed to reduce food waste. Managed a monorepo with Melos, collaborated closely with startup founders, and ensured a smooth, backwards-compatible migration to a new backend API. Utilized Bugfender for advanced bug analysis and migrated the legacy Ruby frontend to Flutter Web.',
-    techStack: ['Flutter', 'Dart', 'BLoC', 'Figma', 'Flutter Web', 'Melos', 'JSON:API'],
-    libraries: ['BLoC', 'Provider', 'Melos', 'Bugfender'],
-    responsibilities: [
-      'Leading the Flutter team',
-      'Managed monorepo using Melos for mobile and web codebases',
-      'Collaborated closely with startup founders to align on product vision',
-      'Prepared backwards-compatible switch to new backend API',
-      'Analyzed bugs and exceptions using Bugfender',
-      'Migrated Ruby on Rails HTML frontend to Flutter Web',
-      'Designed and implemented JSON:API type-safe flutter client',
-    ],
-    interestingCases: [
-      'Thanks to the monorepo, we were able to produce 2 apps from a single codebase. Mobile app included customer and partner features. Web app included partner features only (no customer features were included in the compiled app).',
-      'Backwards-compatible API migration with rollback capability',
-      'Custom bottom sheets transition animation done with Navigator 2.0 API',
-      'Big refactoring of the codebase - removed thousands of lines of code',
-      'Integrated with PayU payment gateway',
-      'Integrated with Google Pay',
-      'Fixing issues with Google Maps integration (blinking when popping the map screen)',
-      'Partner mobile and web from single codebase - AWD (Adaptive Web Design)',
-      'Integration with multiple analytics tools - designed simple tool-agnostic analytics client',
-      'Optimizing queries for fetching the offers showing on the map',
-    ],
-    previewImages: ['/fd-01.jpeg'],
-    allImages: [
-      '/fd-01.jpeg',
-      '/fd-02.jpeg',
-      '/fd-03.jpeg',
-    ],
-    projectType: ['mobile', 'frontend']
-  },
-  {
-    id: '9',
-    slug: 'credit-agricole-bank-polska',
-    name: 'Credit-Agricole Bank Polska',
-    shortDescription: 'Mobile app for Polish bank, atomic design system, and cross-domain data communication.',
-    fullDescription: 'Developed key features for Credit-Agricole Bank Polska’s mobile banking app, including regular and savings accounts, debit/credit card management, and a pixel-perfect UI based on a 1:1 Figma-to-code atomic design system. Collaborated with business owners to simplify banking processes and designed a cross-domain (microfrontends in separate Flutter packages) reactive data communication system. Integrated with APIs not originally designed for mobile, adding abstraction layers as needed.',
-    techStack: ['Flutter', 'Dart', 'BLoC', 'Melos', 'RxDart'],
-    libraries: ['BLoC', 'RxDart', 'Melos', 'Provider'],
-    responsibilities: [
-      'Implemented regular, savings accounts, and debit/credit card management features',
-      'Contributed to atomic design system (1:1 Figma to code)',
-      'Implemented pixel-perfect UI',
-      'Collaborated with business owners to simplify banking processes',
-      'Designed cross-domain (microfrontends) reactive data communication',
-      'Integrated with APIs not prepared for mobile (added abstraction layers)'
-    ],
-    interestingCases: [
-      'One of the biggest flutter projects in the world - in peak ~30 Flutter devs',
-      'Integration with APIs not designed for mobile apps',
-      'Cross-domain communication between microfrontends in Flutter packages',
-      'Atomic design system implementation for banking UI'
-    ],
-    previewImages: ['/cabp-01.webp'],
-    allImages: [
-      '/cabp-01.webp',
-      '/cabp-02.png',
-      '/cabp-03.webp',
-      '/cabp-04.png',
-    ],
-    projectType: ['mobile']
-  },
-  {
-    id: '10',
-    slug: 'trainn-training-plan-generator',
-    name: 'Trainn - Training Plan Generator',
-    shortDescription: 'Sports app for generating training plans, featuring chat, video player, and social sharing.',
-    fullDescription: 'Enhanced a sports app for generating personalized training plans. Fixed and improved the chat feature and its animations, integrated a video player for workout demonstrations, and implemented functionality to render Flutter widgets as images for social media sharing.',
-    techStack: ['Flutter', 'Dart', 'BLoC', 'RxDart', 'Dio'],
-    libraries: ['BLoC', 'RxDart', 'Dio', 'Video Player'],
-    responsibilities: [
-      'Implementing new features, fixing bugs and maintaining the codebase',
-      'Fixed chat feature and improved its animations',
-      'Integrated video player for workout demonstrations',
-      'Implemented rendering of Flutter widgets to images for social sharing'
-    ],
-    interestingCases: [
-      'Rendering Flutter widgets to images for social media',
-      'Smooth chat animations and bug fixes',
-      'Video player integration in training plans'
-    ],
-    previewImages: ['/trainn-01.jpeg'],
-    allImages: [
-      '/trainn-01.jpeg',
-      '/trainn-02.jpeg',
-      '/trainn-03.jpeg',
-      '/trainn-04.jpeg',
-    ],
     projectType: ['mobile']
   },
   {
