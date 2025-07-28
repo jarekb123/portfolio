@@ -8,7 +8,6 @@ import { useState } from 'react';
 const PROJECT_TYPES = [
   { label: 'Frontend', value: 'frontend' },
   { label: 'Mobile', value: 'mobile' },
-  { label: 'Fullstack', value: 'fullstack' },
 ];
 
 const Projects = () => {
@@ -25,7 +24,9 @@ const Projects = () => {
   const filteredProjects =
     selectedTypes.length === 0
       ? projects
-      : projects.filter((project) => selectedTypes.includes(project.projectType));
+      : projects.filter((project) =>
+        project.projectType.some((type) => selectedTypes.includes(type))
+      );
 
   return (
     <div className="min-h-screen bg-background">
@@ -70,25 +71,20 @@ const Projects = () => {
                       key={index}
                       className="flex-1 h-32 bg-muted rounded-lg flex items-center justify-center text-muted-foreground text-sm"
                     >
-                      Preview {index + 1}
+                      <img src={image} alt={project.name} className="w-full object-fit" />
                     </div>
                   ))}
                 </div>
-                {project.featured && (
-                  <Badge className="absolute top-2 right-2 bg-primary/90">
-                    Featured
-                  </Badge>
-                )}
               </div>
 
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
-                  <Badge variant="secondary" className="capitalize">
-                    {project.projectType}
-                  </Badge>
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <Calendar className="w-4 h-4 mr-1" />
-                    {project.completionDate}
+                  <div className="flex gap-1">
+                    {project.projectType.map((type) => (
+                      <Badge key={type} variant="secondary" className="capitalize">
+                        {type}
+                      </Badge>
+                    ))}
                   </div>
                 </div>
                 <CardTitle className="text-xl group-hover:text-primary transition-colors">

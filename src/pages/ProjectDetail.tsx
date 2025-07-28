@@ -5,6 +5,13 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { ArrowLeft, Calendar, Code2, Lightbulb, Target, Users } from 'lucide-react';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+} from '@/components/ui/dialog';
+import { ProjectImageGallery } from '@/components/ui/ProjectImageGallery';
 
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -37,41 +44,31 @@ const ProjectDetail = () => {
               </p>
             </div>
             <div className="flex flex-col items-start md:items-end space-y-2 mt-4 md:mt-0">
-              <Badge variant="secondary" className="capitalize">
-                {project.projectType}
-              </Badge>
-              <div className="flex items-center text-sm text-muted-foreground">
-                <Calendar className="w-4 h-4 mr-1" />
-                Completed {project.completionDate}
+              <div className="flex gap-1">
+                {project.projectType.map((type) => (
+                  <Badge key={type} variant="secondary" className="capitalize">
+                    {type}
+                  </Badge>
+                ))}
               </div>
-              {project.featured && (
-                <Badge className="bg-primary/90">Featured Project</Badge>
-              )}
             </div>
           </div>
         </div>
 
         {/* Project Images */}
-        <Card className="mb-12">
-          <CardHeader>
-            <CardTitle>Project Gallery</CardTitle>
-            <CardDescription>
-              Screenshots and visuals from the {project.name} project
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {project.allImages.map((image, index) => (
-                <div
-                  key={index}
-                  className="aspect-video bg-muted rounded-lg flex items-center justify-center text-muted-foreground border"
-                >
-                  Image {index + 1}
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
+        {Array.isArray(project.allImages) && project.allImages.length > 0 && project.allImages[0] !== '/placeholder.svg' && (
+          <Card className="mb-12">
+            <CardHeader>
+              <CardTitle>Project Gallery</CardTitle>
+              <CardDescription>
+                Screenshots and visuals from the {project.name} project
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ProjectImageGallery images={project.allImages} alt={project.name} />
+            </CardContent>
+          </Card>
+        )}
 
         {/* Project Details Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">

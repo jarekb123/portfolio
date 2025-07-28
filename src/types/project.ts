@@ -10,7 +10,5 @@ export interface Project {
   interestingCases: string[];
   previewImages: string[]; // paths to images in public/
   allImages: string[]; // all project images
-  featured: boolean;
-  completionDate: string;
-  projectType: 'frontend' | 'mobile' | 'fullstack';
+  projectType: Array<'frontend' | 'mobile'>;
 }

@@ -21,10 +21,8 @@ export const projects: Project[] = [
       'Type-safe API client generation from CQRS endpoints'
     ],
     previewImages: ['/placeholder.svg'],
-    allImages: ['/placeholder.svg'],
-    featured: false,
-    completionDate: '2025-02',
-    projectType: 'frontend'
+    allImages: [],
+    projectType: ['frontend']
   },
   {
     id: '2',
@@ -44,14 +42,12 @@ export const projects: Project[] = [
     ],
     interestingCases: [
       'Automated OpenAPI client generation and seamless integration with React Query',
-      'Voice AI agent (VAPI) integration for enhanced user interaction',
+      'VAPI integration for showing the power of voice AI agents',
       'Shared design system for consistent UI/UX across multiple projects'
     ],
-    previewImages: ['confidential'],
-    allImages: ['confidential'],
-    featured: true,
-    completionDate: '2025-05',
-    projectType: 'fullstack'
+    previewImages: ['/placeholder.svg'],
+    allImages: [],
+    projectType: ['frontend']
   },
   {
     id: '3',
@@ -75,10 +71,8 @@ export const projects: Project[] = [
       'Backend-frontend data merging for dynamic content delivery'
     ],
     previewImages: ['/placeholder.svg'],
-    allImages: ['/placeholder.svg'],
-    featured: false,
-    completionDate: '2025-03',
-    projectType: 'frontend'
+    allImages: [],
+    projectType: ['frontend']
   },
   {
     id: '4',
@@ -96,7 +90,8 @@ export const projects: Project[] = [
       'Contributed to Nest.JS micro-service',
       'Integrated with SWAN banking-as-a-service',
       'Integrated with Amplitude (analytics events)',
-      'Integrated with ory.kratos auth service (API and browser flow)'
+      'Integrated with ory.kratos auth service (API and browser flow)',
+      'Integrated with '
     ],
     interestingCases: [
       'Custom form validation framework for complex business logic',
@@ -104,10 +99,8 @@ export const projects: Project[] = [
       'Shared design system for rapid feature development'
     ],
     previewImages: ['/placeholder.svg'],
-    allImages: ['/placeholder.svg'],
-    featured: true,
-    completionDate: '2025-07',
-    projectType: 'mobile'
+    allImages: [],
+    projectType: ['mobile']
   },
   {
     id: '5',
@@ -130,9 +123,176 @@ export const projects: Project[] = [
       'Unified API integration with CQRS and OpenAPI clients'
     ],
     previewImages: ['/placeholder.svg'],
-    allImages: ['/placeholder.svg'],
-    featured: false,
-    completionDate: '2025-07',
-    projectType: 'frontend'
-  }
+    allImages: [],
+    projectType: ['frontend']
+  },
+  {
+    id: '6',
+    slug: 'pharmacy-job-offers-web-app',
+    name: 'Pharmacy Job Offers Web App',
+    shortDescription: 'A web platform for pharmacists to find and manage job offers, built with React and Vite.',
+    fullDescription: 'Developed a modern web application enabling pharmacists to browse and apply for various job offers (one-time, side job, part-time, permanent), while allowing pharmacies to add and manage their listings. The platform features a responsive UI, efficient data fetching, and seamless user experience.',
+    techStack: ['React', 'Vite', 'TypeScript', 'Tailwind CSS', 'REST API'],
+    libraries: ['React Query', 'React Router', 'Axios', 'Tailwind CSS'],
+    responsibilities: [
+      'Led the frontend development of the project',
+      'Communicated with business clients to gather requirements and feedback'
+    ],
+    interestingCases: [
+      'Designed a flexible job offer filtering and search system',
+      'Implemented role-based access for pharmacists and pharmacies',
+      'Optimized data fetching and caching with React Query'
+    ],
+    previewImages: ['/placeholder.svg'],
+    allImages: [],
+    projectType: ['frontend']
+  },
+  {
+    id: '7',
+    slug: 'pharmacy-job-offers-mobile-app',
+    name: 'Pharmacy Job Offers Mobile App',
+    shortDescription: 'A Flutter mobile app for pharmacists and pharmacies to manage and track job offers, including QR code scanning.',
+    fullDescription: 'Built a cross-platform mobile application with Flutter, allowing pharmacists to find and apply for job offers, and pharmacies to manage listings. The app supports job tracking via QR code scanning for start/end times, and provides a smooth user experience for both roles.',
+    techStack: ['Flutter', 'Dart', 'BLoC', 'REST API'],
+    libraries: ['Provider', 'BLoC', 'QR Code Scanner', 'Dio'],
+    responsibilities: [
+      'Led the mobile development of the project',
+      'Implemented job offer browsing and management features',
+      'Integrated QR code scanning for job time tracking'
+    ],
+    interestingCases: [
+      'QR code-based job time tracking for pharmacists',
+    ],
+    previewImages: ['/placeholder.svg'],
+    allImages: [],
+    projectType: ['mobile']
+  },
+  {
+    id: '8',
+    slug: 'foodsi-stop-wasting-food-mobile-app',
+    name: 'Foodsi - Stop Wasting Food Mobile App',
+    shortDescription: 'A Flutter mobile and web app to help users save food, featuring monorepo management and robust backend migration.',
+    fullDescription: 'Led the Flutter team in developing Foodsi, a mobile and web application designed to reduce food waste. Managed a monorepo with Melos, collaborated closely with startup founders, and ensured a smooth, backwards-compatible migration to a new backend API. Utilized Bugfender for advanced bug analysis and migrated the legacy Ruby frontend to Flutter Web.',
+    techStack: ['Flutter', 'Dart', 'BLoC', 'Figma', 'Flutter Web', 'Melos', 'JSON:API'],
+    libraries: ['BLoC', 'Provider', 'Melos', 'Bugfender'],
+    responsibilities: [
+      'Leading the Flutter team',
+      'Managed monorepo using Melos for mobile and web codebases',
+      'Collaborated closely with startup founders to align on product vision',
+      'Prepared backwards-compatible switch to new backend API',
+      'Analyzed bugs and exceptions using Bugfender',
+      'Migrated Ruby on Rails HTML frontend to Flutter Web',
+      'Designed and implemented JSON:API type-safe flutter client',
+    ],
+    interestingCases: [
+      'Thanks to the monorepo, we were able to produce 2 apps from a single codebase. Mobile app included customer and partner features. Web app included partner features only (no customer features were included in the compiled app).',
+      'Backwards-compatible API migration with rollback capability',
+      'Custom bottom sheets transition animation done with Navigator 2.0 API',
+      'Big refactoring of the codebase - removed thousands of lines of code',
+      'Integrated with PayU payment gateway',
+      'Integrated with Google Pay',
+      'Fixing issues with Google Maps integration (blinking when popping the map screen)',
+      'Partner mobile and web from single codebase - AWD (Adaptive Web Design)',
+      'Integration with multiple analytics tools - designed simple tool-agnostic analytics client',
+      'Optimizing queries for fetching the offers showing on the map',
+    ],
+    previewImages: ['/fd-01.jpeg'],
+    allImages: [],
+    projectType: ['mobile', 'frontend']
+  },
+  {
+    id: '9',
+    slug: 'credit-agricole-bank-polska',
+    name: 'Credit-Agricole Bank Polska',
+    shortDescription: 'Mobile app for Polish bank, atomic design system, and cross-domain data communication.',
+    fullDescription: 'Developed key features for Credit-Agricole Bank Polska’s mobile banking app, including regular and savings accounts, debit/credit card management, and a pixel-perfect UI based on a 1:1 Figma-to-code atomic design system. Collaborated with business owners to simplify banking processes and designed a cross-domain (microfrontends in separate Flutter packages) reactive data communication system. Integrated with APIs not originally designed for mobile, adding abstraction layers as needed.',
+    techStack: ['Flutter', 'Dart', 'BLoC', 'Melos', 'RxDart'],
+    libraries: ['BLoC', 'RxDart', 'Melos', 'Provider'],
+    responsibilities: [
+      'Implemented regular, savings accounts, and debit/credit card management features',
+      'Contributed to atomic design system (1:1 Figma to code)',
+      'Implemented pixel-perfect UI',
+      'Collaborated with business owners to simplify banking processes',
+      'Designed cross-domain (microfrontends) reactive data communication',
+      'Integrated with APIs not prepared for mobile (added abstraction layers)'
+    ],
+    interestingCases: [
+      'One of the biggest flutter projects in the world - in peak ~30 Flutter devs',
+      'Integration with APIs not designed for mobile apps',
+      'Cross-domain communication between microfrontends in Flutter packages',
+      'Atomic design system implementation for banking UI'
+    ],
+    previewImages: ['/cabp-01.webp'],
+    allImages: [],
+    projectType: ['mobile']
+  },
+  {
+    id: '10',
+    slug: 'trainn-training-plan-generator',
+    name: 'Trainn - Training Plan Generator',
+    shortDescription: 'Sports app for generating training plans, featuring chat, video player, and social sharing.',
+    fullDescription: 'Enhanced a sports app for generating personalized training plans. Fixed and improved the chat feature and its animations, integrated a video player for workout demonstrations, and implemented functionality to render Flutter widgets as images for social media sharing.',
+    techStack: ['Flutter', 'Dart', 'BLoC', 'RxDart', 'Dio'],
+    libraries: ['BLoC', 'RxDart', 'Dio', 'Video Player'],
+    responsibilities: [
+      'Implementing new features, fixing bugs and maintaining the codebase',
+      'Fixed chat feature and improved its animations',
+      'Integrated video player for workout demonstrations',
+      'Implemented rendering of Flutter widgets to images for social sharing'
+    ],
+    interestingCases: [
+      'Rendering Flutter widgets to images for social media',
+      'Smooth chat animations and bug fixes',
+      'Video player integration in training plans'
+    ],
+    previewImages: ['/trainn-01.jpeg'],
+    allImages: [],
+    projectType: ['mobile']
+  },
+  {
+    id: '11',
+    slug: 'fintech-connector',
+    name: 'Fintech Connector',
+    shortDescription: 'Solo-developed fintech app with real-time chat, push notifications, and repository-based API integration.',
+    fullDescription: 'Developed a fintech connector app as a solo developer, implementing real-time chat with an existing API and Firebase, integrating push notifications via FCM, and building a repository layer for robust API communication.',
+    techStack: ['Flutter', 'Dart', 'BLoC', 'RxDart', 'Cloud Messaging'],
+    libraries: ['BLoC', 'RxDart', 'Firebase Cloud Messaging', 'Provider'],
+    responsibilities: [
+      'Solo developer for the entire app',
+      'Implemented real-time chat with existing API and Firebase',
+      'Integrated push notifications via FCM',
+      'Built repository layer for API integration'
+    ],
+    interestingCases: [
+      'Real-time chat with hybrid API and Firebase',
+      'Push notification integration with FCM',
+      'Repository pattern for scalable API communication'
+    ],
+    previewImages: ['/fc-01.webp'],
+    allImages: [],
+    projectType: ['mobile']
+  },
+  {
+    id: '12',
+    slug: 'kardiolog',
+    name: 'Kardiolog',
+    shortDescription: 'Offline-first health app with charts, Google Fit integration, and local storage.',
+    fullDescription: 'Developed Kardiolog, an offline-first health app as a solo developer. Integrated fl_charts for data visualization, used Sembast for local storage, and connected to Google Fit via native event and method channels.',
+    techStack: ['Flutter', 'Dart', 'BLoC', 'RxDart', 'Sembast', 'fl_charts'],
+    libraries: ['BLoC', 'RxDart', 'Sembast', 'fl_charts'],
+    responsibilities: [
+      'Solo developer for the entire app',
+      'Implemented offline-first architecture with Sembast',
+      'Integrated fl_charts for health data visualization',
+      'Integrated with Google Fit via native event and method channels'
+    ],
+    interestingCases: [
+      'Offline-first data storage with Sembast',
+      'Native integration with Google Fit',
+      'Advanced health data visualization with fl_charts'
+    ],
+    previewImages: ['/placeholder.svg'],
+    allImages: [],
+    projectType: ['mobile']
+  },
 ];
