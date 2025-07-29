@@ -314,8 +314,12 @@ export const projects: Project[] = [
       'Native integration with Google Fit',
       'Advanced health data visualization with fl_charts'
     ],
-    previewImages: [`${BASE_URL}flutter.png`],
-    allImages: [],
+    previewImages: [`${BASE_URL}kardiolog-01.webp`],
+    allImages: [
+      `${BASE_URL}kardiolog-01.webp`,
+      `${BASE_URL}kardiolog-02.webp`,
+      `${BASE_URL}kardiolog-03.webp`,
+    ],
     projectType: ['mobile']
   },
 ];
