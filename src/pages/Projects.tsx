@@ -118,7 +118,7 @@ const Projects = () => {
 
                 {/* View Details Link */}
                 <Link
-                  to={`/projects/${project.slug}`}
+                  to={`/${project.slug}`}
                   className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium"
                 >
                   View Details

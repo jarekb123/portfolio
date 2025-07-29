@@ -60,6 +60,7 @@ export const projects: Project[] = [
     ],
     interestingCases: [
       'One of the biggest flutter projects in the world - in peak ~30 Flutter devs',
+      'Showcase on flutter.dev - https://flutter.dev/showcase/credit-agricole',
       'Integration with APIs not designed for mobile apps',
       'Cross-domain communication between microfrontends in Flutter packages',
       'Atomic design system implementation for banking UI'
