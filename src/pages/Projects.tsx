@@ -34,7 +34,7 @@ const Projects = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-            My Projects
+            Jaroslaw Butajlo | Portfolio
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             A showcase of frontend and mobile applications I've built with modern technologies
