@@ -200,7 +200,9 @@ export const projects: Project[] = [
       'Shared design system for rapid feature development'
     ],
     previewImages: [`${BASE_URL}flutter.png`],
-    allImages: [],
+    allImages: [
+      `${BASE_URL}infinit-02.webp`
+    ],
     projectType: ['mobile']
   },
   {
